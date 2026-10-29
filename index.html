@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <main class="weather-container">
+        <header>
+            <h1>Weather App</h1>W
+            <p>Check the current weather in your city.</p>
+        </header>
+
+        <form id="weather-form">
+            <div class="form-group">
+                <label for="city">City</label>
+                <input
+                    type="text"
+                    id="city"
+                    placeholder="e.g., Montreal"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="province">Province / State</label>
+                <input
+                    type="text"
+                    id="province"
+                    placeholder="e.g., Quebec"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country</label>
+                <input
+                    type="text"
+                    id="country"
+                    placeholder="e.g., Canada"
+                    required
+                >
+            </div>
+
+            <button type="submit" id="weather-button">
+                Get Weather
+            </button>
+        </form>
+
+        <p id="error-message" class="error-message" role="alert"
+           aria-live="polite" hidden></p>
+
+        <p id="status-message" class="status-message"
+           role="status" aria-live="polite"></p>
+
+        <section id="weather-results" hidden>
+            <h2 id="location-name">Weather Information</h2>
+
+            <div class="weather-grid">
+                <article class="weather-card">
+                    <span class="weather-label">Temperature</span>
+                    <p id="temperature" class="weather-value">--</p>
+                </article>
+
+                <article class="weather-card">
+                    <span class="weather-label">Feels Like</span>
+                    <p id="feels-like" class="weather-value">--</p>
+                </article>
+
+                <article class="weather-card">
+                    <span class="weather-label">Wind Speed</span>
+                    <p id="wind-speed" class="weather-value">--</p>
+                </article>
+
+                <article class="weather-card">
+                    <span class="weather-label">Humidity</span>
+                    <p id="humidity" class="weather-value">--</p>
+                </article>
+            </div>
+
+            <p class="data-source">
+                Weather data provided by
+                <a href="https://open-meteo.com/"
+                   target="_blank" rel="noopener noreferrer">
+                    Open-Meteo
+                </a>
+            </p>
+        </section>
+    </main>
+</body>
+</html>
